@@ -1,0 +1,29 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+flake8 = "*"
+flake8-bugbear = "*"
+black = "*"
+build = "*"
+isort = "*"
+autoflake = "*"
+pre-commit = "*"
+mkdocs-material = "*"
+dog-school = {editable = true, path = "."}
+
+[packages]
+
+[scripts]
+setup = "pipenv sync --dev"
+test = "pytest"
+lint = "pre-commit run -a"
+docs = "mkdocs serve"
+build = "python -m build"
+update = "bash -c 'pipenv update --dev && pre-commit autoupdate'"
+publish = "mkdocs gh-deploy --force"
+clean = "git clean -fX ."

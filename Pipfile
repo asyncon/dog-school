@@ -15,8 +15,12 @@ autoflake = "*"
 pre-commit = "*"
 mkdocs-material = "*"
 dog-school = {editable = true, path = "."}
+requests = "*"
 
 [packages]
+eventsourcing = "*"
+fastapi = "*"
+uvicorn = "*"
 
 [scripts]
 setup = "pipenv sync --dev"
